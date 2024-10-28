@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sephora - About Us</title>
+    <style>
+        /* Inline styling to center the image */
+        .about-us img {
+            display: block;
+            margin: 0 auto;
+            width: 80%; /* Adjust width as needed */
+            max-width: 400px; /* Limits image size on larger screens */
+            border-radius: 10px; /* Optional: Adds rounded corners */
+            opacity: 0; /* Start invisible */
+            transform: translateY(-20px); /* Move up slightly */
+            animation: fadeInUp 1s ease forwards; /* Animation for image */
+            animation-delay: 0.5s; /* Delay for image animation */
+        }
+
+        /* Animation keyframes for fade-in and move-up effect */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* Start below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        header {
+            text-align: center; /* Center text in header */
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 1s ease forwards; /* Fade in animation for header */
+            animation-delay: 0.1s; /* Delay for header animation */
+        }
+
+        /* Animation keyframes for header fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px); /* Start above */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        h2 {
+            opacity: 0; /* Start invisible */
+            transform: translateY(-20px); /* Move up slightly */
+            animation: fadeInUp 1s ease forwards; /* Animation for section title */
+            animation-delay: 0.3s; /* Delay for title animation */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>About Us</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about-us">
+            <h2>Who We Are</h2>
+            <img src="images/Sephora.jpg" alt="Sephora Store">
+            <p>Sephora is a leading global beauty retailer, known for its curated selection of cosmetics, skincare, and fragrance. Our mission is to provide customers with the ultimate beauty experience.</p>
+            <h3>Our Values</h3>
+            <ul>
+                <li>Inclusivity</li>
+                <li>Innovation</li>
+                <li>Community Engagement</li>
+                <li>Sustainability</li>
+            </ul>
+            <h3>Our History</h3>
+            <p>Founded in 1969, Sephora has grown to become a beloved brand worldwide, offering the latest trends and expert advice in beauty.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sephora</p>
+    </footer>
+</body>
+</html>

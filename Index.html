@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sephora - Home</title>
+    <style>
+        /* Inline styles to center images */
+        .hero {
+            text-align: center;
+        }
+
+        .hero img {
+            display: block;
+            margin: 0 auto;
+            opacity: 0; /* Start invisible */
+            transform: translateY(-20px); /* Move up slightly */
+            animation: fadeInUp 1s ease forwards; /* Animation for image */
+            animation-delay: 0.3s; /* Delay for image animation */
+        }
+
+        .featured-products {
+            text-align: center;
+        }
+
+        .product-card img {
+            display: block;
+            margin: 0 auto;
+            opacity: 0; /* Start invisible */
+            transform: scale(0.9); /* Slightly scaled down */
+            animation: fadeInScale 1s ease forwards; /* Animation for product images */
+        }
+
+        /* Animation keyframes for fade-in and scale-up */
+        @keyframes fadeInScale {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Apply a delay to each product image */
+        .product-card:nth-child(1) img {
+            animation-delay: 0.6s; /* Delay for first product */
+        }
+        .product-card:nth-child(2) img {
+            animation-delay: 0.9s; /* Delay for second product */
+        }
+
+        /* Animation for header */
+        header {
+            text-align: center; /* Center text in header */
+            opacity: 0; /* Start invisible */
+            animation: fadeIn 1s ease forwards; /* Fade in animation for header */
+            animation-delay: 0.1s; /* Delay for header animation */
+        }
+
+        /* Animation keyframes for header fade-in */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px); /* Start above */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+
+        /* Animation for section title */
+        h2 {
+            opacity: 0; /* Start invisible */
+            transform: translateY(-20px); /* Move up slightly */
+            animation: fadeInUp 1s ease forwards; /* Animation for section title */
+            animation-delay: 0.4s; /* Delay for title animation */
+        }
+
+        /* Keyframes for the section title fade-in */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px); /* Start below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at original position */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sephora</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>Explore Our Beauty Products</h2>
+            <img src="images/sephora-best-sellers-february.webp" alt="Beauty products at Sephora">
+        </section>
+        <section class="featured-products">
+            <h3>Featured Products</h3>
+            <div class="product-card">
+                <img src="images/sephora-matte-lip-creme.webp" alt="Product 1">
+                <h4>Product 1</h4>
+                <p>Sephora Matte Lip Crème  
+                    "Experience long-lasting, velvety color with our Sephora Matte Lip Crème. Its rich pigment glides on smoothly, delivering a comfortable, matte finish that stays flawless all day.".</p>
+            </div>
+            <div class="product-card">
+                <img src="images/2ad1d51c691cb9bc71e8a41d1646d92c.jpg" alt="Product 2">
+                <h4>Product 2</h4>
+                <p>Sephora Daily Defense SPF 50  
+                    "Protect your skin with Sephora's Daily Defense SPF 50. Lightweight and non-greasy, this sunscreen provides broad-spectrum protection against UVA and UVB rays while leaving a smooth, matte finish perfect for everyday wear.".</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sephora</p>
+    </footer>
+</body>
+</html>
